@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	<%= render(:partial => 'layouts/head') %>
+
+<body>
+
+	<div class="outerWrapper">
+		<div class="pgOverlay"></div>
+
+	  <%= render(:partial => 'layouts/navigation') %>
+		
+
+	  	<div class="innerWrapper">
+		    <%= link_to(image_tag('logo.png', :class => "appLogo"), '/') %>
+		    <p class="appMoto">World class coffee in the heart of downtown Austin</p>
+		    <p class="appContact-site">201 W 9TH ST, AUSTIN, TX 78701</p>
+		    <p class="appPhone">789-555-1234</p>
+		    
+		    <% if flash[:notice] %>
+					<div class="notice"><%= flash[:notice] %></div>
+				<% end %>
+				<% if flash[:alert] %>
+					<div class="alert"><%= flash[:alert] %></div>
+				<% end %>
+
+		    <div class="appContent">
+	    	
+					
+
+
+					<%= yield %>
+
+
+
+		    </div>
+		    <div class="appFooter">
+		      <p>Powered by Squarespace. Background image by Flickr user 5chw4r7z.</p>
+		    </div>
+	 	</div>
+
+
+
+
+
+<%= render(:partial => 'layouts/bottom') %>

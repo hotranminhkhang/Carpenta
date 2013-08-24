@@ -1,0 +1,93 @@
+<% provide(:title, 'product') %>
+
+<div class="productWrapper clearfix">
+	<div class="backLink">
+		<%= link_to("← Back to Shop", :controller => 'shop', :action => 'collection', :collection => @product.collection.permalink) %>
+	</div>
+	<div class="productSummary clearfix">
+		<div class="productGallery">
+			<div class="productSlideshow">
+				<div class="mainImage">
+					<%= image_tag(@product.image_01.url) %>
+				</div>
+				
+			</div>
+			<% unless @product.image_02.url.include? "missing" %>
+				<div class="productThumbnails">
+
+					<!-- Thumnbnail 1 -->
+					<div class="thumbnailImage">
+						<div class="imgCenter">
+							<%= image_tag(@product.image_01.url) %>
+						</div>
+					</div>
+
+					<!-- Thumnbnail 2 -->
+					<% unless @product.image_02.url.include? "missing" %>
+						<div class="thumbnailImage">
+							<div class="imgCenter">
+								<%= image_tag(@product.image_02.url) %>
+							</div>
+						</div>
+					<% end %>
+
+					<!-- Thumnbnail 3 -->	
+					<% unless @product.image_03.url.include? "missing" %>
+						<div class="thumbnailImage">
+							<div class="imgCenter">
+								<%= image_tag(@product.image_03.url) %>
+							</div>
+						</div>
+					<% end %>
+
+					<!-- Thumnbnail 4 -->	
+					<% unless @product.image_04.url.include? "missing" %>
+						<div class="thumbnailImage">
+							<div class="imgCenter">
+								<%= image_tag(@product.image_04.url) %>
+							</div>
+						</div>
+					<% end %>
+
+					<!-- Thumnbnail 5 -->	
+					<% unless @product.image_05.url.include? "missing" %>
+						<div class="thumbnailImage">
+							<div class="imgCenter">
+								<%= image_tag(@product.image_05.url) %>
+							</div>
+						</div>
+					<% end %>
+				</div>
+			<% end %>
+
+		</div>
+		<div class="productDetails">
+			<div class="productTitle"><%= @product.title %></div>
+			<div class="productPrice"><%= number_to_currency(@product.price, :precision=>0, :unit=>'VND', :format=>"%n %u") %></div>
+			<div class="productShortDesc">
+				<%= simple_format(@product.short_description) %>
+			</div>
+			<!-- TODO: add shopping cart -->
+			<a href="#" class="addToCartButton">Add to Cart</a>
+		</div>
+	</div>
+	<div class="productDescription">
+		<h3>Full Description</h3>
+		<%= simple_format(@product.long_description) %>
+	</div>
+</div>
+
+
+<script>
+	$(function(){
+		var mainImage = $('.mainImage>img');
+		$('.thumbnailImage').find('img').click(function() {
+			var swapImg = this.src;
+			console.log(swapImg);
+			mainImage.fadeOut(200,function(){
+				mainImage.attr('src', swapImg);
+				mainImage.fadeIn(200);
+			});
+		});
+	});
+</script>

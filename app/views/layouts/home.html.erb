@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+	<%= render(:partial => 'layouts/head') %>
+
+<body>
+
+	<div class="mainOuterWrapper">
+	  <div class="pgOverlay"></div>
+	  
+	  <%= render(:partial => 'layouts/navigation') %>
+
+
+
+		<%= yield %>
+
+
+
+		
+
+<%= render(:partial => 'layouts/bottom') %>

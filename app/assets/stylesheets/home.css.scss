@@ -1,0 +1,97 @@
+
+/*==========================Background==========================*/
+.mainOuterWrapper {
+	/*max-width: 960px;*/
+	background-image: image-url('BG2.jpg');
+	background-position: top left;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	position: absolute;
+	min-width: 100%;
+	width: 100%;
+	min-height: 100%;
+	z-index: 1;
+}
+.pgOverlay {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	z-index: -1;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+
+/*==========================Main Page content==========================*/
+.mainContent {
+	position: relative;
+	width: 650px;	
+	top: 10px;
+	margin: auto;
+	background-color: rgba(0, 0, 0, 0.498039);
+	text-align: center;
+	font-family: Georgia, serif;
+	padding: 15px 60px 40px 60px;
+	color: rgb(251, 251, 251);
+}
+
+.mainLogo{
+	/*color: rgb(251, 251, 251);*/
+	/*font-family: Voltaire, Georgia, serif;
+	font-size: 115px;
+	font-style: normal;
+	font-weight: normal;
+	letter-spacing: 1px;
+	line-height: 115px;*/
+	/*height: 115px;*/
+	margin-bottom: 5px;
+}
+
+.mainMoto{
+	color: rgb(255, 214, 117);
+	font-size: 21px;
+	font-style: italic;
+	font-weight: normal;
+	height: 29px;
+	letter-spacing: normal;
+	line-height: 29px;
+	margin-bottom: 15px;
+}
+
+.mainContact-site, .mainPhone {
+	margin: 13px 0 13px 0;
+	color: rgb(171, 176, 179);
+	font-family: 'Source Sans Pro', Tahoma, Arial, sans-serif;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: normal;
+	height: 20px;
+	letter-spacing: 3px;
+	line-height: 20.390625px;
+}
+
+hr.mainSmLine {
+	width: 85px;
+	border-top: 1px;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto; 
+    padding: 0;
+    border: none;
+    border-top: solid;
+    border-width: 2px;
+    text-align: center;
+}
+.mainDescription {
+	line-height: 24px;
+	font-weight: normal;
+}
+
+
+

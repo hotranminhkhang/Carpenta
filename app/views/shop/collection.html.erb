@@ -1,0 +1,31 @@
+<% provide(:title, 'shop') %>
+
+<% if @collection != nil %>
+  <div class="collectionTitle"><%= @collection.title %></div>
+<% end %>
+
+<div class="productList clearfix">
+  <%if @products != nil %>
+    <% @products.each do |p| %>
+      <% link = "/shop/" + @collection.permalink + "/" +p.permalink %>
+      <%= link_to(link, :class => 'productListItem') do %>
+        <span class="product-image">
+          <%= image_tag(p.image_01.url) %>
+        </span>
+        <span class="product-meta">
+          <%= p.title %>
+          <br/>
+          <%= p.price %>
+        </span>
+      <% end %>
+      
+    <% end %>
+  <% end %>
+
+</div>
+
+<!-- <div class="digg_pagination"> -->
+<% if @products != nil %>
+  <%= will_paginate(@products, :class => 'digg_pagination') %>
+<% end %>
+<!-- </div> -->

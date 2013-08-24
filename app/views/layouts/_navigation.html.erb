@@ -1,0 +1,22 @@
+<nav class="mainNavigation clearfix">
+	<ul class="menu clearfix">
+	  <li><a href="/">HOME</a></li>
+	  <li><a href="/">MENU</a></li>
+	  <li><a style="cursor: pointer;">SHOP</a>
+	    <ul class="subMenu">
+	      <li>
+					<%= link_to("Tech Wood", :controller => 'shop', :action => 'collection', :collection => "tech-wood"  ) %>
+				</li>
+	      <li>
+					<%= link_to("Fun Wood", :controller => 'shop', :action => 'collection', :collection => "fun-wood"  ) %>
+	      </li>
+	      <li>
+	      	<%= link_to("Art Wood", :controller => 'shop', :action => 'collection', :collection => "art-wood"  ) %>
+	      </li>
+	    </ul>
+	  </li>
+	  <li><a href="/">OUR BEANS</a></li>
+	  <li><a href="/">NEWS</a></li>
+	  <li><a href="/">READ ME</a></li>
+	</ul>
+</nav>
