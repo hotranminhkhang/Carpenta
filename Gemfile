@@ -11,8 +11,9 @@ gem 'will_paginate'#, '~> 3.0.0'
 
 gem 'devise'#, '~> 3.0.2'
 
+gem "activeadmin",  '< 0.5'
 
-gem 'activeadmin', '< 0.5'#,         github: 'gregbell/active_admin', branch: 'rails4'
+# gem 'activeadmin', '< 0.5'#,         github: 'gregbell/active_admin', branch: 'rails4'
 
 
 gem 'bcrypt-ruby'#, git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
@@ -32,10 +33,11 @@ group :production do
 end
 
 group :assets do
-	gem 'sass-rails'# '~> 4.0.0'
 	gem 'coffee-rails'# '~> 4.0.0'
 	gem 'uglifier'# '>= 1.3.0'
 end
+	gem 'sass-rails'# '~> 4.0.0'
+
 # Use SCSS for stylesheets
 
 # Use Uglifier as compressor for JavaScript assets

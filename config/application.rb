@@ -4,7 +4,7 @@ require 'rails/all'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
-  Bundler.require(*Rails.groups(:assets => %w(development test)))
+  Bundler.require(:default, :assets, Rails.env)
   # If you want your assets lazily compiled in production, use this line
   # Bundler.require(:default, :assets, Rails.env)
 end
@@ -61,5 +61,8 @@ module Carpenta
 
 
     config.assets.initialize_on_precompile = false
+
+    # Precompile additional assets. Defaults to [application.js, application.css, non-JS/CSS]
+config.assets.precompile += ['active_admin.css.scss', 'active_admin.js', 'active_admin/print.css'] 
   end
 end
