@@ -18,6 +18,7 @@ gem 'activeadmin', '< 0.5'#,         github: 'gregbell/active_admin', branch: 'r
 gem 'bcrypt-ruby'#, git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 
 gem 'paperclip'# git: 'git://github.com/thoughtbot/paperclip.git'
+gem 'aws-sdk'
 
 # Use sqlite3 as the database in Development Env
 group :development do
