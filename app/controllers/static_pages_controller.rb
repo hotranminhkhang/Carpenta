@@ -1,5 +1,7 @@
 class StaticPagesController < ApplicationController
 
+  before_filter :fetch_collection_menu
+  
   layout :resolve_layout
 
   def home
@@ -21,4 +23,10 @@ class StaticPagesController < ApplicationController
   		"application"
   	end
   end
+
+  # fetch collection menu
+  def fetch_collection_menu
+    @collections = Collection.where(:active => true)
+  end
+
 end

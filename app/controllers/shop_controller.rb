@@ -1,5 +1,8 @@
 class ShopController < ApplicationController
 
+  before_filter :fetch_collection_menu
+  
+
   def collection
   	@collection = Collection.where(:permalink => params[:collection], :active => true).first
   	if @collection == nil
@@ -23,4 +26,11 @@ class ShopController < ApplicationController
 
   end
 
+  private
+  # fetch collection menu
+  def fetch_collection_menu
+    @collections = Collection.where(:active => true)
+  end
+
 end
+
