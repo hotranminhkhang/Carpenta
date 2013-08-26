@@ -32,5 +32,9 @@ class ShopController < ApplicationController
     @collections = Collection.where(:active => true)
   end
 
+  def randomize_background
+    backgrounds = BackgroundImage.where(:place => "shop")
+    @background = backgrounds[rand(backgrounds.size)]
+  end
 end
 

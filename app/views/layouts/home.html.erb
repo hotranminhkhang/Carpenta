@@ -4,6 +4,10 @@
 	<%= render(:partial => 'layouts/head') %>
 
 <body>
+	<!-- Randomized Background Image -->
+	<style>
+		body {background-image: image-url(<%= @background.image.url %>);}
+	</style>
 
 	<div class="mainOuterWrapper">
 	  <div class="pgOverlay"></div>

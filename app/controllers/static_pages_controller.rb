@@ -29,4 +29,9 @@ class StaticPagesController < ApplicationController
     @collections = Collection.where(:active => true)
   end
 
+  def randomize_background
+    backgrounds = BackgroundImage.where(:place => "home")
+    @background = backgrounds[rand(backgrounds.size)]
+  end
+
 end
