@@ -1,6 +1,7 @@
 class ShopController < ApplicationController
 
   before_filter :fetch_collection_menu
+  before_filter :randomize_background
   
 
   def collection
@@ -34,7 +35,7 @@ class ShopController < ApplicationController
 
   def randomize_background
     backgrounds = BackgroundImage.where(:place => "shop")
-    @background = backgrounds[rand(backgrounds.size)]
+    @background = backgrounds[rand(backgrounds.size)-1]
   end
 end
 

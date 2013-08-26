@@ -1,7 +1,8 @@
 class StaticPagesController < ApplicationController
 
   before_filter :fetch_collection_menu
-  
+  before_filter :randomize_background
+
   layout :resolve_layout
 
   def home
@@ -31,7 +32,7 @@ class StaticPagesController < ApplicationController
 
   def randomize_background
     backgrounds = BackgroundImage.where(:place => "home")
-    @background = backgrounds[rand(backgrounds.size)]
+    @background = backgrounds[rand(backgrounds.size)-1]
   end
 
 end
