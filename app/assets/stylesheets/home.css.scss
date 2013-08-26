@@ -2,7 +2,7 @@
 /*==========================Background==========================*/
 .mainOuterWrapper {
 	/*max-width: 960px;*/
-	/*background-image: image-url('BG2.jpg');*/
+	background-image: image-url('BG2.jpg');
 	background-position: top left;
 	background-size: cover;
 	background-attachment: fixed;
@@ -41,15 +41,7 @@
 }
 
 .mainLogo{
-	/*color: rgb(251, 251, 251);*/
-	/*font-family: Voltaire, Georgia, serif;
-	font-size: 115px;
-	font-style: normal;
-	font-weight: normal;
-	letter-spacing: 1px;
-	line-height: 115px;*/
-	/*height: 115px;*/
-	margin-bottom: 5px;
+
 }
 
 .mainMoto{
@@ -61,6 +53,7 @@
 	letter-spacing: normal;
 	line-height: 29px;
 	margin-bottom: 15px;
+	margin-top:15px;
 }
 
 .mainContact-site, .mainPhone {
@@ -91,6 +84,7 @@ hr.mainSmLine {
 .mainDescription {
 	line-height: 24px;
 	font-weight: normal;
+	font-style: italic;
 }
 
 

@@ -16,3 +16,4 @@
 
 # Ignore locally precompiled asset for heroku
 /public/assets/
+/public/system/
