@@ -8,18 +8,13 @@ Carpenta::Application.routes.draw do
   root :to => 'static_pages#home'
   
   match '/shop/:collection/', :to => 'shop#collection', :via => 'get'
-
   match '/shop/:collection/:product', :to => 'shop#productDetail', :via => 'get'
   
-  # get "shop/index"
-  # get "static_pages/home"
-  # get "static_pages/shop"
-  # get "static_pages/template"
-
 
  
   match '/template',      to: 'static_pages#template',      via: 'get'
   match '/shop',          to: 'static_pages#shop',          via: 'get'
+  match '/contact',       to: 'static_pages#contact',       via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
