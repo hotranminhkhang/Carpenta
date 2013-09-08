@@ -15,7 +15,10 @@
 	  <div class="pgOverlay"></div>
 	  
 	  <%= render(:partial => 'layouts/navigation') %>
-
+		<div class="cartSummary">
+			<%= render(:partial => 'carts/cartSummary') %>
+		</div>
+	  
 		<%= yield %>
 
 <%= render(:partial => 'layouts/bottom') %>

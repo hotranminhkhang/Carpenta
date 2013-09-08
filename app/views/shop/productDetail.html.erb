@@ -67,8 +67,8 @@
 			<div class="productShortDesc">
 				<%= simple_format(@product.short_description) %>
 			</div>
-			<!-- TODO: add shopping cart -->
-			<a href="#" class="addToCartButton">Add to Cart</a>
+				<%= button_to "Add to Cart", order_line_items_path(product_id: @product.id), remote: true, :class => 'addToCartButton' %>			
+
 		</div>
 	</div>
 	<div class="productDescription">

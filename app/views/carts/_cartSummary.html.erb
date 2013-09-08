@@ -1,0 +1,13 @@
+
+<div class="cartSumBG" 
+		<% if @cart.order_line_items.empty? %>
+			style = "opacity: 0; display: none'"
+		<% end %>
+	>
+	<div class="cartSumDetails">
+		<div class="cartSumIcon"></div>
+		Cart - 
+		<span class="cartSumItems"><%= pluralize(@cart.total_items , 'item') %></span>
+		<span class="cartSumTotal"><%= number_to_currency(@cart.total_price, :precision=>0, :unit => '') %></span>
+	</div>
+</div>

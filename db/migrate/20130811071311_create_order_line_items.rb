@@ -5,7 +5,7 @@ class CreateOrderLineItems < ActiveRecord::Migration
     	t.references(:order)
     	t.references(:product)
 
-    	t.integer(:quantity)
+    	t.integer(:quantity, :default => 1)
     	t.integer(:price)
 
       t.timestamps

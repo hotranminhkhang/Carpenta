@@ -44,7 +44,7 @@
 
 
 
-/*==========================Navigation==========================*/
+/*========================Navigation========================*/
 
 nav.mainNavigation {
 	/*width: 90%;*/
@@ -112,7 +112,64 @@ nav.mainNavigation a:hover {
 
 
 
-/*==========================Application Content==========================*/
+/*=======================Cart Summary=======================*/
+
+
+.cartSumBG{
+	visibility: visible;
+	color: #DDD;
+	background-image: linear-gradient(#1e1e1e, #040404);
+	border-radius: 30px;
+	width:240px;
+	height: 26px;
+	padding: 10px 15px; 
+	position: fixed;
+	z-index: 1;
+	right: 10px;
+	cursor: pointer;
+	font-family: Arial;
+	opacity: 0.7;
+	transition: opacity .5s linear;
+}
+
+.cartSumBG:Hover{
+	opacity:1;
+}
+.cartSumIcon{
+	background-image: image-url("icon-cart-18-light.png");
+	height: 18px;
+	width: 18px;
+	display: inline-block;
+	margin-right: 10px;
+	margin-left: 5px;
+	position: relative;
+	top: 3px;
+}
+.cartSumDetails{
+	font-size: 14px;
+	font-weight: bold;
+}
+.cartSumItems{
+
+}
+.cartSumTotal{
+	float: right;
+	font-size: 17px;
+	font-weight: 800;
+	top: 3px;
+	position: relative;
+}
+.cartSumTotal:before{
+	content: '₫ ';
+}
+
+
+
+
+
+
+
+/*=====================Application Content=====================*/
 .innerWrapper {
 	position: relative;
 	width: 770px;	
@@ -253,7 +310,7 @@ nav.mainNavigation a:hover {
 
 
 
-/*==========================Social Icon==========================*/
+/*=========================Social Icon=========================*/
 .social {
 	width: 650px;
 	margin: auto;
@@ -288,7 +345,7 @@ nav.mainNavigation a:hover {
 
 
 
-/*==========================Miscelaneous==========================*/
+/*========================Miscelaneous========================*/
 body {
 	margin:0;
 	font-family: 'Source Sans Pro', Tahoma, Arial, sans-serif;
@@ -317,11 +374,11 @@ body {
 
 
 
-/*||||||||||||||||||||||||||||||||||||||SHOP|||||||||||||||||||||||||||||||||||||||||*/
+/*|||||||||||||||||||||||||||SHOP||||||||||||||||||||||||||||||*/
 
 /*TODO: maybe cut this out to it own CSS, or not?*/
 
-/*==========================Product List==========================*/
+/*========================Product List========================*/
 
 .collectionTitle {
 	font-family: 'Voltaire', Georgia, serif;
@@ -388,7 +445,7 @@ body {
 
 
 
-/*||||||||||||||||||||||||||||||||||||||PRODUCT|||||||||||||||||||||||||||||||||||||||||*/
+/*|||||||||||||||||||||||||PRODUCT|||||||||||||||||||||||||||*/
 
 
 .productWrapper {
@@ -478,9 +535,10 @@ body {
 	display:block;
 	width: 170px;
 	padding: 10px;
-
 	background-color: rgb(39, 39, 39);
 	color: #FFF;
+	border: none;
+	cursor: pointer;
 }
 
 .productDescription {

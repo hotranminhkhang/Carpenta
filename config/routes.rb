@@ -1,6 +1,9 @@
 Carpenta::Application.routes.draw do
   
 
+  resources :carts
+  resources :order_line_items
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -13,8 +16,10 @@ Carpenta::Application.routes.draw do
 
  
   match '/template',      to: 'static_pages#template',      via: 'get'
-  match '/shop',          to: 'static_pages#shop',          via: 'get'
   match '/contact',       to: 'static_pages#contact',       via: 'get'
+
+
+ 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

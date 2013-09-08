@@ -15,7 +15,7 @@
         <span class="product-meta">
           <%= p.title %>
           <br/>
-          <%= p.price %>
+          <%=  number_to_currency(p.price, :precision=>0, :unit=>'VND', :format=>"%n %u") %>
         </span>
       <% end %>
       

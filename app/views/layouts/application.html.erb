@@ -15,13 +15,15 @@
 		<div class="pgOverlay"></div>
 
 	  <%= render(:partial => 'layouts/navigation') %>
+		<div class="cartSummary">
+			<%= render(:partial => 'carts/cartSummary') %>
+		</div>
 		
-
 	  	<div class="innerWrapper">
 		    <%= link_to(image_tag('logo.png', :class => "appLogo"), '/') %>
-		    <p class="appMoto">World class coffee in the heart of downtown Austin</p>
-		    <p class="appContact-site">201 W 9TH ST, AUSTIN, TX 78701</p>
-		    <p class="appPhone">789-555-1234</p>
+		    <p class="appMoto">Another Experience Of Wood | Một Cảm Nhận Khác Về Gỗ</p>
+		    <p class="appContact-site">44/4A PHAN VAN HON ST, TAN THOI NHAT WARD, DIST. 12, HCMC</p>
+		    <p class="appPhone">(+84)986-576-780</p>
 		    
 		    <% if flash[:notice] %>
 					<div class="notice"><%= flash[:notice] %></div>
@@ -36,7 +38,7 @@
 
 		    </div>
 		    <div class="appFooter">
-		      <p>Powered by Squarespace. Background image by Flickr user 5chw4r7z.</p>
+		      <p> Carpenta Woodworking Shop Copyright © 213 All Rights Reserved</p>
 		    </div>
 	 	</div>
 
