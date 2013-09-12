@@ -1,0 +1,10 @@
+$('.shoppingCart').animate({'opacity': 0}, 200, function(){
+	$('.shoppingCart').html("<%=j render(:partial => 'carts/shoppingCart') %>").promise().done(function(){
+			$(".cartProductQty").qtyChangeOnBlur();
+	});
+	$('.shoppingCart').animate({'opacity': 1}, 00);
+});
+
+$('.cartSummary').html("<%=j render(:partial => 'carts/cartSummary') %>");
+
+$('.cartSumBG').animate({'color': "#4FFF37"},200).animate({'color': "#DDD"}, 600);

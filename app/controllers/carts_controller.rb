@@ -31,4 +31,15 @@ class CartsController < InheritedResources::Base
   	end	
   end
 
+
+  def showCart
+    @cart = current_cart
+  end
+
+  def removeCartItem
+    line = OrderLineItem.find_by_id(params[:order_line_items])
+    line.destroy
+    redirect_to action: 'showCart'
+  end
+
 end

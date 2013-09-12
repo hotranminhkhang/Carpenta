@@ -1,5 +1,5 @@
 class OrderLineItem < ActiveRecord::Base
-	attr_accessible :product, :product_id, :order, :cart
+	attr_accessible :product, :product_id, :order, :cart, :quantity
 
 	# Relationship
 	belongs_to :product

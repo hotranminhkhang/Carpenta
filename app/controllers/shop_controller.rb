@@ -23,7 +23,6 @@ class ShopController < ApplicationController
   end
 	
 
-
   def productDetail
   	@product = Product.where(:permalink => params[:product], :active => true).first
     # TODO: Validation for product URL

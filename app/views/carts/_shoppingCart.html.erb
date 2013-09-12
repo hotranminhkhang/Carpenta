@@ -1,0 +1,56 @@
+<% if @cart.total_items == 0 %>
+		You have nothing in your shopping cart. 
+		<a href='#'>Continue Shopping</a>
+	<% else %>
+
+		<table class="cartDetails">
+			<tr>
+				<th colspan="2" class="cartProductImage">Item</th>
+				<th>Quantity</th>
+				<th>Price</th>
+				<th></th>
+			</tr>
+
+			<% @cart.order_line_items.each do |order_line_item| %>
+				<tr>
+					<td class="cartProductImage">
+						<div class="cartProductImageDiv">
+							<span class="cartProductImageSpan">
+			          <%= image_tag(order_line_item.product.image_01.url) %>
+	        		</span>
+        		</div>
+					</td>
+					<td class='cartProductTitle'>
+						<% link = "/shop/" + order_line_item.product.collection.permalink + "/" +order_line_item.product.permalink %>
+						<%= link_to(order_line_item.product.title, link )%> 
+					</td>
+					<td class="cartProductQty">
+						<input id= "cartProductQtyInput" type="number" max='99' min='1' value=<%= order_line_item.quantity %> data-id=<%= order_line_item.id %>>
+						<%#= number_field_tag("cartProductQtyInput", order_line_item.quantity, in:1..99), remote: true %>
+
+
+
+
+
+
+					</td>
+					<td class="cartProductPrice">
+						<%= number_to_currency(order_line_item.total_price, :precision=>0, :unit=>'')%>
+					</td>
+					<td class="cartActions">	
+						<%= button_to "", order_line_item_path(order_line_item.id), method: :delete, remote: true, :class=>'cartItemRemove'  %>
+					</td>
+				</tr>	
+			<% end %>
+
+			<tr class="cartTotalLine">
+				<td colspan="2"></td>
+				<td>Subtotal:</td>
+				<td class="cartTotalCell"><%= number_to_currency(@cart.total_price, :precision=>0, :unit=>'')%></td>
+				<td>&nbsp</td>
+			</tr>
+		</table>
+
+		<%= button_to "CHECKOUT", '#' , remote: true, :class => 'checkOutButton' %>
+		
+	<% end %>
