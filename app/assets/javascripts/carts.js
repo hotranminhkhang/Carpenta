@@ -1,14 +1,7 @@
 $(function(){
 	$(".cartProductQty").qtyChangeOnBlur();
 
-	document.getElementById('cartProductQtyInput').onkeypress = function(e) { e.preventDefault(); };
-	document.getElementById('cartProductQtyInput').onkeydown = function(e) {
-  if(e.keyCode != 38 && e.keyCode != 40)
-    e.preventDefault();
-	};
-	if(document.addEventListener)
-    document.getElementById('cartProductQtyInput').addEventListener('contextmenu',function(e) { e.preventDefault();
-	},false);
+
 
 });
 
@@ -29,4 +22,4 @@ jQuery.fn.qtyChangeOnBlur = function(){
 
 };
 
-	
+

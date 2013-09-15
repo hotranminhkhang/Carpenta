@@ -160,8 +160,8 @@ nav.mainNavigation a:hover {
 	top: 3px;
 	position: relative;
 }
-.cartSumTotal:before{
-	content: '₫ ';
+.cartSumTotal:after{
+	content: ' ₫';
 }
 
 
@@ -653,8 +653,8 @@ body {
 	text-align: center;
 	font-size: 16px;
 }
-.cartProductPrice:before{
-	content: '₫ ';
+.cartProductPrice:after{
+	content: ' ₫';
 	font-size: 14px;
 }
 .cartActions{
@@ -679,8 +679,8 @@ tr.cartTotalLine td{
 	font-size: 18px;
 
 }
-.cartTotalCell:before{
-	content: '₫ ';
+.cartTotalCell:after{
+	content: ' ₫';
 	font-size: 15px;
 }
 .checkOutButton{
@@ -698,3 +698,270 @@ tr.cartTotalLine td{
 	border: none;
 	cursor: pointer;
 }
+
+
+
+
+
+
+/*||||||||||||||||||||||||CHECKOUT PAGE|||||||||||||||||||||||||*/
+
+.orderPageWrapper{
+	background: #f3f3f3;
+	color: #333;
+	margin: 0;
+	padding-bottom: 50px;
+	font-size: 13px;
+	font-family: 'proxima-nova', 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+.orderPage{
+	position: relative;
+	margin: 0 auto;
+	width: 900px;
+	padding: 45px 0;
+	clear: both;
+	overflow: hidden;
+}
+.orderHeader{
+	font-size: 24px;
+	font-weight: bold;
+	height: 29px;
+	margin-bottom: 35px;
+}
+.orderTitle{
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+.orderSummary{
+	background: #FFF;
+	width: 360px;
+	float: right;
+	margin-right: 30px;
+	padding: 30px;
+}
+.orderInfo{
+	background: #FFF;
+	width: 360px;
+	float: right;
+	margin-right: 30px;
+	padding: 30px;
+}
+
+/*-------------Summary Form--------------*/
+
+.orderProductDetails{
+	border-collapse: collapse;
+	width: 100%;
+	border: none;
+	color: #333538;
+}
+.orderProductDetails tr {
+	font-size: 13px;
+}
+.orderProductDetails tr th {
+	height: 30px;
+	color: #A09A9A;
+}
+.orderProductImage{
+	text-align: left;
+	height: 42px;
+}
+
+.orderProductImage img {
+	position: relative;
+	width: 52px;	
+} 
+.orderProductTitle{
+	text-align: left;
+	width: 100px;
+}
+.orderProductTitle a{
+	display: block;
+	margin-left: 5px;
+	text-decoration: none;
+	font-size:13px;	
+	color: #333;
+}
+.orderProductTitle a:Hover{
+	color: #FFD675;
+}
+.orderProductQty{
+	width: 80px;
+	text-align: center;
+	font-size: 15px;
+}
+.orderProductQty input{
+	text-align: right;
+	border: 1px solid #CCC;
+	border-radius: 4px;
+	line-height: normal;
+	display: inline-block;
+	height: 20px;
+	width: 30px;
+	padding: 3px 6px;
+}
+.orderProductPrice{
+	width: 100px;
+	text-align: right;
+	font-size: 15px;
+}
+.orderProductPrice:after{
+	content: ' ₫';
+	font-size: 15px;
+}
+.orderActions{
+	text-align: center;
+}
+.orderItemRemove{
+	width: 11px;
+	height: 11px;
+	background: transparent image-url('icon_close_7_dark.png') center center no-repeat;
+	cursor: pointer;
+	opacity: .5;
+}
+.orderItemRemove:hover{
+	opacity: 0.8;
+}
+.orderSubTotalLine {
+	border-top: 1px solid #DDD;
+	text-align: right;
+}
+.orderSubTotalLine td{
+	padding-top: 15px ;
+	line-height: 13px;
+	font-size: 11px;
+}
+.orderTaxLine {
+	text-align: right;
+}
+.orderTaxLine td {
+	line-height: 13px;
+	font-size: 11px;
+}
+.orderShippingLine {
+	border-bottom: 1px solid #DDD;
+	text-align: right;
+}
+.orderShippingLine td {
+	padding-bottom: 15px ;
+	line-height: 13px;
+	font-size: 11px;
+}
+.orderSubTotalCell:after, .orderTaxCell:after, .orderShippingCell:after{
+	content: ' ₫';
+	font-size: 15px;
+}
+td.orderSubTotalCell, td.orderTaxCell, td.orderShippingCell{
+	font-size: 14px;
+}
+.orderGrandTotal{
+	margin-top: 20px;
+}
+.orderGrandTotalCell{
+	display: block;
+	float: right;
+	font-weight: bold;
+	font-size: 16px;
+	margin-right: 10px;
+	width: 100px;
+	text-align: right;
+}
+.orderGrandTotalCell:after{
+	content: ' ₫';
+	font-size: 18px;
+
+}
+.orderGrandTotalLabel{
+	display: block;
+	float: right;
+	text-transform: uppercase;
+	font-size: 16px;
+	color: #666;
+}
+/*---------------Shipping Info Form--------------*/
+
+
+
+.orderFieldFull{
+	margin: .6em 0 0;
+	padding: 8px 10px;
+	border: 1px solid #DDD;
+	color: #333;
+	border-radius: 4px;
+	width: 100%;
+	box-sizing: border-box;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.05) inset;
+}
+.orderFieldHalfLeft{
+	margin: .6em 0 0;
+	padding: 8px 10px;
+	border: 1px solid #DDD;
+	color: #333;
+	border-radius: 4px;
+	width: 49%;
+	float: left;
+	box-sizing: border-box;
+	margin-right: 2%;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.05) inset;
+}
+.orderFieldHalfRight{
+	margin: .6em 0 0;
+	padding: 8px 10px;
+	border: 1px solid #DDD;
+	color: #333;
+	border-radius: 4px;
+	width: 49%;
+	float: left;
+	box-sizing: border-box;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.05) inset;
+}
+.orderFieldError{
+	border: 1px solid red;
+}
+.orderFieldFull:focus, .orderFieldHalfRight:focus, .orderFieldHalfLeft:focus{
+	outline: 0;
+	color: #404040;
+	border-color: #42b1ff;
+	box-shadow: 0 0 0 1px #42b1ff;
+}
+.orderSubmit{
+	margin: 30px auto ;
+	display: block;
+	width: 150px;
+	background: #222;
+	color: #fff;
+	font-size: 12px;
+	line-height: normal;
+	cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-align: center;
+	padding: 11px 0;
+	border: none;
+	border-radius: 25px;
+}
+
+.orderError{
+	width: 100%;
+	color: #FFF;
+	/*background: */
+	padding: 5px 8px 5px 29px;
+	font-size: 11px;
+	border-radius: 4px;
+	line-height: 19px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	box-sizing: border-box;
+	background: #a00 image-url("tiny-alert.png") no-repeat 7px 7px;
+
+}
+.orderErrorCount{
+	font-weight: bold;
+}
+
+ul.orderErrorList{
+	padding:0px;
+	margin:0px;
+}
+
+

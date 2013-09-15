@@ -9,7 +9,7 @@ gem 'bootstrap3-wip-rails'
 gem 'will_paginate'#, '~> 3.0.0'
 
 
-gem 'devise'#, '~> 3.0.2'
+gem 'devise', '~> 3.0.3'
 
 gem "activeadmin",  '< 0.5'
 

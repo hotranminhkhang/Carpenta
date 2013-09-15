@@ -1,9 +1,5 @@
 class OrderLineItemsController < ApplicationController
 
-  # before_filter :fetch_collection_menu
-  # before_filter :randomize_background
-
-  
 	def create
 		@cart = current_cart
 		product = Product.find(params[:product_id])	

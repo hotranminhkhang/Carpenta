@@ -82,14 +82,18 @@ ActiveRecord::Schema.define(:version => 20130906073548) do
 
   create_table "orders", :force => true do |t|
     t.string   "full_name"
+    t.string   "phone"
     t.string   "email"
+    t.string   "address_line_1"
+    t.string   "address_line_2"
+    t.string   "city"
+    t.string   "country"
     t.string   "payment_type"
     t.string   "status"
     t.date     "delivery_date"
-    t.text     "delivery_address"
     t.text     "notes"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "products", :force => true do |t|

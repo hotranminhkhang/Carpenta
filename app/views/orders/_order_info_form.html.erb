@@ -1,0 +1,83 @@
+<div class="orderTitle">Shipping Info</div>
+
+<%= form_for(@order) do |f| %>
+	
+	<!-- Full Name -->
+	<% if @order.errors[:full_name].length > 0 %>
+		<%= f.text_field :full_name, :placeholder=>"Fullname", :class=>"orderFieldFull orderFieldError" %>
+	<% else %>
+		<%= f.text_field :full_name, :placeholder=>"Fullname", :class=>"orderFieldFull" %>
+	<% end %>
+
+	<!-- Phone Number -->
+	<% if @order.errors[:phone].length > 0 %>
+		<%= f.telephone_field :phone, :placeholder=>"Phone Number", :class=>"orderFieldFull orderFieldError" %>
+	<% else %>
+		<%= f.telephone_field :phone, :placeholder=>"Phone Number", :class=>"orderFieldFull" %>
+	<% end %>
+
+	<!-- Email -->
+	<% if @order.errors[:email].length > 0 %>
+		<%= f.email_field :email, :placeholder=>"Email", :class=>"orderFieldFull orderFieldError"%>
+	<% else %>
+		<%= f.email_field :email, :placeholder=>"Email", :class=>"orderFieldFull"%>
+	<% end %>
+
+	<!-- Address Line 1 -->
+	<% if @order.errors[:address_line_1].length > 0 %>
+		<%= f.text_field :address_line_1, :placeholder=>"Address Line 1", :class=>"orderFieldFull orderFieldError" %>
+	<% else %>
+		<%= f.text_field :address_line_1, :placeholder=>"Address Line 1", :class=>"orderFieldFull" %>
+	<% end %>
+
+	<!-- Address Line 2 -->
+	<% if @order.errors[:address_line_2].length > 0 %>
+		<%= f.text_field :address_line_2, :placeholder=>"Address Line 2", :class=>"orderFieldFull orderFieldError"%>
+	<% else %>
+		<%= f.text_field :address_line_2, :placeholder=>"Address Line 2", :class=>"orderFieldFull"%>
+	<% end %>
+
+	<!-- City -->
+	<% if @order.errors[:city].length > 0 %>
+		<%= f.select :city, Order::CITIES, {} , {:class=>"orderFieldHalfLeft orderFieldError"}%>
+	<% else %>
+		<%= f.select :city, Order::CITIES, {} , {:class=>"orderFieldHalfLeft"}%>
+	<% end %>
+
+	<!-- Country -->
+	<% if @order.errors[:country].length > 0 %>
+		<%= f.select :country,  Order::COUNTRIES, {},{:class=>"orderFieldHalfRight orderFieldError" }%>
+	<% else %>
+		<%= f.select :country,  Order::COUNTRIES, {},{:class=>"orderFieldHalfRight" }%>
+	<% end %>
+
+	<!-- Notes -->
+	<% if @order.errors[:notes].length > 0 %>
+		<%= f.text_area :notes, :size => "30x10", :placeholder=>"Customer Notes", :class=>"orderFieldFull orderFieldError", :style=>'resize:none' %>
+	<% else %>
+		<%= f.text_area :notes, :size => "30x10", :placeholder=>"Customer Notes", :class=>"orderFieldFull", :style=>'resize:none' %>
+	<% end %>
+
+	<!-- <div class=""> -->
+		<%#= f.select :payment_type %>
+	<!-- </div> -->
+
+	<% if @order.errors.any? %>
+	  <div class="orderError">
+			<div class="orderErrorCount">
+				<%= pluralize(@order.errors.count, "error") %> user input errors:
+			</div>
+			<ul class="orderErrorList">
+				<% @order.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+ 	
+
+
+	<div>
+    <%= f.submit :class=>"orderSubmit" %>
+  </div>
+<% end %>

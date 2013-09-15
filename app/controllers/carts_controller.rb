@@ -1,8 +1,5 @@
 class CartsController < InheritedResources::Base
   
-	# before_filter :fetch_collection_menu
- #  before_filter :randomize_background
-
   def show
   	begin
   		@cart = Cart.find(params[:id])

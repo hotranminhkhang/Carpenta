@@ -1,0 +1,51 @@
+<div class="orderTitle">Order Summary</div>
+<table class="orderProductDetails">
+	<tr>
+		<th colspan="2" class="orderProductImage">Item</th>
+		<th>Quantity</th>
+		<th style="text-align:right;">Price</th>
+	</tr>
+
+	<% @cart.order_line_items.each do |order_line_item| %>
+		<tr>
+			<td class="orderProductImage">
+		
+        <%= image_tag(order_line_item.product.image_01.url) %>
+    	
+			</td>
+			<td class='orderProductTitle'>
+				<% link = "/shop/" + order_line_item.product.collection.permalink + "/" +order_line_item.product.permalink %>
+				<%= link_to(order_line_item.product.title, link )%> 
+			</td>
+			<td class="orderProductQty">
+				<%= number_field_tag("orderProductQtyInput", order_line_item.quantity, in:1..99, :disabled=>true, :class=>"orderProductQtyInput") %>
+			</td>
+			<td class="orderProductPrice">
+				<%= number_to_currency(order_line_item.total_price, :precision=>0, :unit=>'')%>
+			</td>
+		</tr>	
+	<% end %>
+
+	<tr class="orderSubTotalLine">
+		<td colspan="2"></td>
+		<td>SUBTOTAL</td>
+		<td class="orderSubTotalCell"><%= number_to_currency(@cart.total_price, :precision=>0, :unit=>'')%></td>
+		<td>&nbsp</td>
+	</tr>
+	<tr class="orderTaxLine">
+		<td colspan="2"></td>
+		<td>TAX</td>
+		<td class="orderTaxCell"><%= number_to_currency(0, :precision=>0, :unit=>'')%></td>
+		<td>&nbsp</td>
+	</tr>
+	<tr class="orderShippingLine">
+		<td colspan="2"></td>
+		<td>SHIPPING</td>
+		<td class="orderShippingCell"><%= number_to_currency(0, :precision=>0, :unit=>'')%></td>
+		<td>&nbsp</td>
+	</tr>
+</table>
+<div class="orderGrandTotal">
+	<div class="orderGrandTotalCell"><%= number_to_currency(@cart.total_price, :precision=>0, :unit=>'')%></div>
+	<div class="orderGrandTotalLabel">Grand Total</div>
+</div>

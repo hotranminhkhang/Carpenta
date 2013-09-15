@@ -190,7 +190,7 @@ DEPENDENCIES
   bcrypt-ruby
   bootstrap3-wip-rails
   coffee-rails
-  devise
+  devise (~> 3.0.3)
   jbuilder
   jquery-rails (< 3.0.0)
   paperclip

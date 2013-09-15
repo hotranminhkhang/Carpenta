@@ -14,7 +14,6 @@ Carpenta::Application.routes.draw do
   match '/shop/:collection/', :to => 'shop#collection', :via => 'get'
   match '/shop/:collection/:product', :to => 'shop#productDetail', :via => 'get'
   match '/commerce/showCart', :to => 'carts#showCart', :via => 'get'
-  match '/commerce/removeCartItem/:order_line_items', :to => 'carts#removeCartItem', :via => 'get'
  
 
 
