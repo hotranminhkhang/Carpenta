@@ -23,6 +23,7 @@ class Cart < ActiveRecord::Base
 
 	def total_items
 		order_line_items.to_a.sum{ |line| line.quantity}
-		
 	end
+
+	
 end

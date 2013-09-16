@@ -2,34 +2,19 @@ class OrdersController < ApplicationController
 
 	layout 'checkout'
 
-
-	def index
-    @orders = Order.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @orders }
+  def showOrder
+    @order = Order.where(:permalink => params[:id]).first
+    if @order == nil
+      flash[:notice] = "This order does not exist!!!"
+      redirect_to root_path 
     end
   end
-
-  # GET /orders/1
-  # GET /orders/1.json
-
-  def show
-    @order = Order.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @order }
-    end
-  end
-
 
 	def new
 		@cart = current_cart
 		if @cart.order_line_items.empty?
 			flash[:notice] = "Your cart is empty"
-			redirect_to controller: 'shop', action: 'collection', collection: 'all'	
+			redirect_to root_path	
 			return
 		end	
 
@@ -42,14 +27,17 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new(params[:order])
-
+    @order.add_order_line_items_from_cart(current_cart)
+    @order.permalink = SecureRandom.urlsafe_base64
     respond_to do |format|
       if @order.save
-        cart = current_cart
-        cart.destroy;
+        Cart.destroy(session[:cart_id])
+        session[:cart_id] = nil
+        OrderNotifier.received(@order).deliver
+
         format.html { 
           flash[:notice] = 'order was successfully created.'
-          redirect_to controller: 'shop', action: 'collection', collection: 'all' 
+          redirect_to root_path 
          }
         format.json { render json: @order, status: :created, location: @order }
       else

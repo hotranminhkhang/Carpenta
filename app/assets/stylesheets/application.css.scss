@@ -216,7 +216,7 @@ nav.mainNavigation a:hover {
 	font-size: 20px;
 	font-family: 'Source Sans Pro', Tahoma, Arial, sans-serif;
 	font-weight: 700;
-
+	text-align: center;
 }
 .notice {
 	background-color: #1CCA5B;
@@ -965,3 +965,28 @@ ul.orderErrorList{
 }
 
 
+
+
+
+/*||||||||||||||||||||||||SHOW ORDER|||||||||||||||||||||||||*/
+.showOrderFieldTitle{	
+	display: inline-block;
+	margin-top: 10px;
+	color: #FFF;
+	font-size: 10px;
+	background-color: #474242;
+	text-transform: uppercase;
+	padding: 0 10px;
+	border-radius: 4px 4px 0 0;
+}
+.showOrderFieldFull{
+	min-height: 34px;
+	margin: 0;
+	padding: 5px 7px;
+	border: 1px solid #DDD;
+	color: #333;
+	border-radius: 0 4px 4px 4px;
+	width: 100%;
+	box-sizing: border-box;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.05) inset;
+}

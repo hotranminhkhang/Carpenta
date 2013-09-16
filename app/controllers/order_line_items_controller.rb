@@ -25,7 +25,7 @@ class OrderLineItemsController < ApplicationController
     @order_line_item.destroy
 
     respond_to do |format|
-      format.html { redirect_to posts_url }
+      format.html { redirect_to order_line_items_url }
       format.json { head :no_content }
       format.js
     end
@@ -42,7 +42,7 @@ class OrderLineItemsController < ApplicationController
   			format.js
   		else
 				format.html { render action: "edit" }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.json { render json: @order_line_item.errors, status: :unprocessable_entity }
   		end
   	end
   end

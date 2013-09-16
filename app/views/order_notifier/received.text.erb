@@ -1,0 +1,14 @@
+Dear <%= @order.full_name %>
+
+Thank you for your recent order from Carpenta Woodstore.
+
+You ordered the following items:
+
+<% @order.order_line_items. each do |item| %>
+	<%= sprintf("%2d x %s", 
+							item.quantity,
+							truncate(item.product.title, length: 50)) %>s %>
+
+<% end %>
+
+We'll send you a separate e-mail when your order ships.

@@ -14,10 +14,18 @@
 	<div class="mainOuterWrapper">
 	  <div class="pgOverlay"></div>
 	  
+		<% if flash[:notice] %>
+			<div class="notice"><%= flash[:notice] %></div>
+		<% end %>
+		<% if flash[:alert] %>
+			<div class="alert"><%= flash[:alert] %></div>
+		<% end %>
+	  
 	  <%= render(:partial => 'layouts/navigation') %>
 		<div class="cartSummary">
 			<%= render(:partial => 'carts/cartSummary') %>
 		</div>
+
 	  
 		<%= yield %>
 

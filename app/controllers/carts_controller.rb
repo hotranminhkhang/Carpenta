@@ -1,19 +1,19 @@
 class CartsController < InheritedResources::Base
   
-  def show
-  	begin
-  		@cart = Cart.find(params[:id])
-  	rescue ActiveRecord::RecordNotFound
-  		logger.error "Attempt to access invalid cart #{params[:id]}"
-  		flash[:notice] = "Invalid cart"
-  		redirect_to controller: 'shop', action: 'collection', collection: 'all'
-  	else
-  		respond_to do |format|
-  			format.html # show.html.erb
-  			format.json { render json: @cart }
-  		end
-  	end
-  end
+  # def show
+  # 	begin
+  # 		@cart = Cart.find(params[:id])
+  # 	rescue ActiveRecord::RecordNotFound
+  # 		logger.error "Attempt to access invalid cart #{params[:id]}"
+  # 		flash[:notice] = "Invalid cart"
+  # 		redirect_to controller: 'shop', action: 'collection', collection: 'all'
+  # 	else
+  # 		respond_to do |format|
+  # 			format.html # show.html.erb
+  # 			format.json { render json: @cart }
+  # 		end
+  # 	end
+  # end
 
   def destroy
   	# @cart = current_cart

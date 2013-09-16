@@ -1,9 +1,9 @@
 Carpenta::Application.routes.draw do
   
 
-  resources :carts
-  resources :order_line_items
-  resources :orders
+  resources :carts, only: [:destroy]
+  resources :order_line_items, only: [:create, :destroy, :update]
+  resources :orders, only: [:new, :create]
 
   ActiveAdmin.routes(self)
 
@@ -15,7 +15,7 @@ Carpenta::Application.routes.draw do
   match '/shop/:collection/:product', :to => 'shop#productDetail', :via => 'get'
   match '/commerce/showCart', :to => 'carts#showCart', :via => 'get'
  
-
+  match '/commerce/showOrder/:id', :to => 'orders#showOrder', :via => 'get'
 
 
   match '/template',      to: 'static_pages#template',      via: 'get'

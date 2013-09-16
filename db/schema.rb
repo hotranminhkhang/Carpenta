@@ -81,6 +81,7 @@ ActiveRecord::Schema.define(:version => 20130906073548) do
   end
 
   create_table "orders", :force => true do |t|
+    t.string   "permalink"
     t.string   "full_name"
     t.string   "phone"
     t.string   "email"
