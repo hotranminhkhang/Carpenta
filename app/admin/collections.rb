@@ -1,4 +1,4 @@
-ActiveAdmin.register Collection do
+ActiveAdmin.register Collection, :as => "ProductCategory" do
 	
 	# controller do
 

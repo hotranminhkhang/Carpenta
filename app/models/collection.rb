@@ -7,5 +7,4 @@ class Collection < ActiveRecord::Base
 	# Validations
 	validates_presence_of :title, :permalink
 
-
 end
