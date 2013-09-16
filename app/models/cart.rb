@@ -18,11 +18,17 @@ class Cart < ActiveRecord::Base
 	end
 
 	def total_price
-		order_line_items.to_a.sum{ |line| line.total_price}
+		if order_line_items.any?
+			return order_line_items.to_a.sum{ |line| line.total_price}	
+		end		
+		return 0
 	end
 
 	def total_items
-		order_line_items.to_a.sum{ |line| line.quantity}
+		if order_line_items.any?
+			return order_line_items.to_a.sum{ |line| line.quantity}
+		end		
+		return 0
 	end
 
 	
