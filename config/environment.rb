@@ -11,8 +11,8 @@ Carpenta::Application.configure do
 	config.action_mailer.smtp_settings = {
 		address: 								"smtp.gmail.com",
 		port: 									587, 	
-		authentication: 				"plain",
-		user_name: 							"hotranminhkhang",
+		authentication: 				:login,
+		user_name: 							"hotranminhkhang@gmail.com",
 		password: 							"Neverb@ckd0wn1",
 		enable_starttls_auto: 	true
 	}
