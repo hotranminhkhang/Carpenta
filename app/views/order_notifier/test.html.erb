@@ -65,6 +65,8 @@ h1{color: #ffffff;font-family: 'Arial Black', Arial, Helvetica; font-size: 39px;
 <table cellpadding="0" cellspacing="0" border="0" width="100%">
 	<tr>
 		<td valign="top" align="center" id="top" class="outer" bgcolor="#3d4852" background="https://s3-ap-southeast-1.amazonaws.com/carpenta-images/mail-template/images/bg_body.gif">
+			<table class="texttopbottom" cellpadding="0" cellspacing="0" align="center" width="600">
+				<tr>
 					<td valign="top"><img src="https://s3-ap-southeast-1.amazonaws.com/carpenta-images/mail-template/images/blank.gif" width="1" height="8" alt="" /></td>
 				</tr>
 				<tr>
@@ -74,7 +76,7 @@ h1{color: #ffffff;font-family: 'Arial Black', Arial, Helvetica; font-size: 39px;
 					</td>
 				</tr>
 				<tr>
-					<td style="background: url(https://s3-ap-southeast-1.amazonaws.com/carpenta-images/mail-template/images/bg_top.png) no-repeat;"><img src="https://s3-ap-southeast-1.amazonaws.com/carpenta-images/mail-template/images/blank.gif" width="1" height="12" alt="" /></td>
+					<td style="background: url(https://s3-ap-southeast-1.amazonaws.com/carpenta-images/mail-template/images/bg_top.png) no-repeat;"><img src="images/blank.gif" width="1" height="12" alt="" /></td>
 				</tr>
 			</table>
 			<table cellpadding="0" cellspacing="0" align="center" width="600" style="background: url(https://s3-ap-southeast-1.amazonaws.com/carpenta-images/mail-template/images/bg_email_singlecol.png) repeat-y;">
@@ -82,7 +84,7 @@ h1{color: #ffffff;font-family: 'Arial Black', Arial, Helvetica; font-size: 39px;
 					<td rowspan="4" valign="top"><img src="https://s3-ap-southeast-1.amazonaws.com/carpenta-images/mail-template/images/blank.gif" width="15" height="1" alt="" /></td>
 					<td rowspan="4" valign="top"><img src="https://s3-ap-southeast-1.amazonaws.com/carpenta-images/mail-template/images/header_strip.gif" alt="" width="20" height="249" /></td>
 					<td rowspan="3" valign="top"><img src="https://s3-ap-southeast-1.amazonaws.com/carpenta-images/mail-template/images/header_l.gif" alt="" width="405" height="184" /></td>
-					<td bgcolor="#fbfdfd" colspan="2" width="100" height="26"><img src="https://s3-ap-southeast-1.amazonaws.com/carpenta-images/mail-template/images/blank.gif" width="100" height="26" alt="" /></td>
+					<td bgcolor="#fbfdfd" colspan="2" width="100" height="26"><img src="images/blank.gif" width="100" height="26" alt="" /></td>
 					<td rowspan="4" valign="top"><img src="https://s3-ap-southeast-1.amazonaws.com/carpenta-images/mail-template/images/header_r.gif" alt="" width="45" height="249" /></td>
 					<td rowspan="4" valign="top"><img src="https://s3-ap-southeast-1.amazonaws.com/carpenta-images/mail-template/images/blank.gif" width="15" height="1" alt="" /></td>
 				</tr>
@@ -99,7 +101,7 @@ h1{color: #ffffff;font-family: 'Arial Black', Arial, Helvetica; font-size: 39px;
 				<tr>
 					<td style="background: url(https://s3-ap-southeast-1.amazonaws.com/carpenta-images/mail-template/images/bg_title.gif) no-repeat;" background="https://s3-ap-southeast-1.amazonaws.com/carpenta-images/mail-template/images/bg_title.gif" valign="bottom" colspan="3" height="65" align="left">
 						<h1>
-                        	CARPENTA
+                        	ORDER CONFIRMATION
                         </h1>
 					</td>
 				</tr>
@@ -123,39 +125,29 @@ h1{color: #ffffff;font-family: 'Arial Black', Arial, Helvetica; font-size: 39px;
 											<td rowspan="4"><img src="https://s3-ap-southeast-1.amazonaws.com/carpenta-images/mail-template/images/blank.gif" alt="" width="15" height="1" /></td>
 										</tr>
 										<tr>											
-											<td bgcolor="#eaf4f7" valign="top" width="529"><h2>Order Confirmation</h2></td>
+											<td bgcolor="#eaf4f7" valign="top" width="529"><h2>You have successfully ordered the following item:</h2></td>
 										</tr>
 										<tr>
 											<td bgcolor="#eaf4f7" valign="top" class="border">
-												<p>
-													You have successfully ordered the following item:
-												</p>
+												<p>A wonderful serenity has taken <a href="#">possession</a> of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</p>
 												<ul>
-													<% @order.order_line_items.each do |item| %>
+													
 														<li>
-															<span style="float:left; width:30px;"><%= item.quantity %></span>
-															<span style="float:left; width:30px;"> &times; </span> 
-
-															<span style="float:left; width:250px"><%= item.product.title %></span> 
-															<span style="float:left; width:100px; text-align:right;"> 
-																| <%= number_to_currency(item.total_price, :precision=>0, :unit=>'VND', :format=>"%n %u") %> |
-															</span>
-
+															<span style="float:left; width:30px;"> 5 </span>
+															<span style="float:left; width:30px;"> &times; </span>
+															
+															<span style="float:left; width:250px">Wooden Whale</span> 
+															<span style="float:left; width:100px; text-align:right;">| $100.00 |</span>
 														</li>
-													<% end %>
-
+													
 													<li>
-													<span style="float:left; width:250px;">GRAND TOTAL: </span>
-													<span style="float:left; width:160px; text-align:right;">| <%= number_to_currency(@order.total_price, :precision=>0, :unit=>'VND', :format=>"%n %u") %> |</span>
+														<span style="font-size:16px;float:left; width:250px;">Grand Total: </span>
+														<span style="font-size:16px;float:left; width:160px; text-align:right;"> $100.00 </span>
+														
 													</li>
-
 												</ul>
 																							
 												<!-- <img src="<$imagesrc$>" alt="" width="529" /> -->
-												<p>You can also access your order on our website using the following link:</p>
-												<p>
-													<%= link_to	@order.permalink_url, @order.permalink_url, html_options={target: "_blank"} %>
-												</p>
 											</td>
 										</tr>
 										<tr>

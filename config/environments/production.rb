@@ -81,6 +81,14 @@ Carpenta::Application.configure do
   Paperclip::Attachment.default_options[:path] = '/:class/:attachment/:id_partition/:style/:filename'
 
 
-
+  ActionMailer::Base.smtp_settings = {
+  :address        => 'smtp.sendgrid.net',
+  :port           => '587',
+  :authentication => :plain,
+  :user_name      => ENV['SENDGRID_USERNAME'],
+  :password       => ENV['SENDGRID_PASSWORD'],
+  :domain         => 'carpenta.com',
+  :enable_starttls_auto => true
+  }
   
 end

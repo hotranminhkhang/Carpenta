@@ -25,4 +25,11 @@ class OrderNotifier < ActionMailer::Base
     mail to: order.email, subject: 'Carpenta Order Shipped'
 
   end
+
+
+  def test
+    mail to: "hotranminhkhang@gmail.com", subject: "Carpenta Test"
+  end
+
+
 end
