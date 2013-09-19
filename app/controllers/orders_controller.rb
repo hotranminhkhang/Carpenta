@@ -6,7 +6,7 @@ class OrdersController < ApplicationController
     @order = Order.where(:permalink => params[:id]).first
     if @order == nil
       flash[:notice] = "This order does not exist!!!"
-      redirect_to root_path 
+      redirect_to root_url 
     end
   end
 
@@ -14,7 +14,7 @@ class OrdersController < ApplicationController
 		@cart = current_cart
 		if @cart.order_line_items.empty?
 			flash[:notice] = "Your cart is empty"
-			redirect_to root_path	
+			redirect_to root_url	
 			return
 		end	
 
@@ -37,7 +37,7 @@ class OrdersController < ApplicationController
 
         format.html { 
           flash[:notice] = 'order was successfully created.'
-          redirect_to root_path 
+          redirect_to root_url 
          }
         format.json { render json: @order, status: :created, location: @order }
       else

@@ -1,11 +1,32 @@
 <% provide(:title, 'Contact') %>
 
 <div class="contactWrapper">
-	<div class="googleMap"></div>
-	<div class="contactStatement"></div>
+	<div class="googleMap">
+		<iframe src="http://mapsengine.google.com/map/embed?mid=zJLf4_3Y-Blk.ka6sJlMzkIrY" width="590" height="330"></iframe>
+	</div>
+	<div class="contactStatement">
+		Contact us, We'd love to hear from you!
+	</div>
 	<hr>
-	<form class="contactForm">
-		
-		
-	</form>
+	<!-- <form class="contactForm"> -->
+
+	<%= form_tag dispatch_email_path, method: :post, :class=>"contactForm" do %>
+		<%= label_tag "user_info[name]", "Name", :class=>"contactFieldTitle" %>
+		<%= text_field_tag "user_info[name]",nil, :class=>"contactFieldFull" %>
+
+		<%= label_tag "user_info[email]", "Email Address", :class=>"contactFieldTitle" %>
+		<%= email_field_tag "user_info[email]",nil, :class=>"contactFieldFull" %>
+
+		<%= label_tag "user_info[subject]", "Subject", :class=>"contactFieldTitle" %>
+		<%= text_field_tag "user_info[subject]",nil, :class=>"contactFieldFull" %>
+
+		<%= label_tag "user_info[message]", "Message", :class=>"contactFieldTitle" %>
+		<%= text_area_tag "user_info[message]",nil, :size=> "25x10", :class=>"contactFieldFull" %>
+
+		<%= submit_tag "Submit" %>
+
+	<% end %>
+
+
+
 </div>

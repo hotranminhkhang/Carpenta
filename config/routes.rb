@@ -11,11 +11,18 @@ Carpenta::Application.routes.draw do
 
   root :to => 'static_pages#home'
   
+  match 'contact', to: 'static_pages#contact', as: 'contact', via: 'get'
+  match 'contact', to: 'static_pages#dispatch_email', as: 'dispatch_email', method: :post
+
+  
   match '/shop/:collection/', :to => 'shop#collection', :via => 'get'
   match '/shop/:collection/:product', :to => 'shop#productDetail', :via => 'get'
   match '/commerce/showCart', :to => 'carts#showCart', :via => 'get'
  
   match '/commerce/showOrder/:id', :to => 'orders#showOrder', :via => 'get'
+
+
+
 
 
   match '/template',      to: 'static_pages#template',      via: 'get'

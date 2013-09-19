@@ -990,3 +990,65 @@ ul.orderErrorList{
 	box-sizing: border-box;
 	box-shadow: 0 2px 2px rgba(0,0,0,0.05) inset;
 }
+
+
+/*||||||||||||||||||||||||CONTACT US|||||||||||||||||||||||||*/
+.contactWrapper{
+	margin: 50px 40px;
+	text-align: left;
+	font-family: 'Source Sans Pro', Tahoma, Arial, sans-serif;	
+}
+
+iframe{
+	border: none;
+}
+.ilErfe-e1YmVc-ZMv3u{
+	background-color: #964A4A;
+}
+
+.contactStatement{
+	margin-top: 40px;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 24px;
+	line-height: 1.25em;
+	letter-spacing: 4px;
+	color: #333538; 
+}
+hr{
+	height: 1px;
+	background-color: #15171a;
+	border: none;
+	opacity: 0.2;
+	margin: 35px 0;
+}
+
+.contactFieldFull{
+	margin: 0;
+	padding: 8px 10px;
+	border: 1px solid #DDD;
+	color: #333;
+	border-radius: 4px;
+	width: 100%;
+	box-sizing: border-box;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.05) inset;
+}
+.contactFieldFull:focus{
+	outline: 0;
+	color: #404040;
+	border-color: #42b1ff;
+	box-shadow: 0 0 0 1px #42b1ff;
+}
+.contactFieldTitle{
+	display: inline-block;
+	margin-top: 25px;
+	color: #FFF;
+	font-size: 15px;
+	background-color: #474242;
+	text-transform: uppercase;
+	padding: 0 10px;
+	border-radius: 4px 4px 0 0;
+}
+.contactFieldTitle:after{
+	content: " *";
+}

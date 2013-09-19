@@ -36,18 +36,18 @@ Carpenta::Application.configure do
   config.assets.debug = true
 
 
-  Carpenta::Application.configure do
-    config.action_mailer.delivery_method = :smtp
-    config.action_mailer.perform_deliveries = true  
-    config.action_mailer.smtp_settings = {
-      address:                "smtp.gmail.com",
-      port:                   587,  
-      authentication:         :login,
-      user_name:              "hotranminhkhang@gmail.com",
-      password:               "Neverb@ckd0wn1",
-      enable_starttls_auto:   true
-    }
-  end
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true  
+  config.action_mailer.smtp_settings = {
+    address:                "smtp.gmail.com",
+    port:                   587,  
+    authentication:         :plain,
+    user_name:              "hotranminhkhang@gmail.com",
+    password:               "Neverb@ckd0wn1",
+    enable_starttls_auto:   true
+  }
+  
 
   
 end
