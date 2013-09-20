@@ -17,7 +17,7 @@
 /*==========================Background==========================*/
 .outerWrapper {
 	/*max-width: 960px;*/
-	background-image: image-url("shop3.jpg");
+	background-image: image-url("application-bg-image.jpg");
 	background-position: top left;
 	background-size: cover;
 	background-attachment: fixed;
@@ -60,7 +60,7 @@ nav.mainNavigation ul {
 	list-style: none;
 	display: inline-block;
 	padding: 0 0 0 0 ;
-	margin-top: 10px;
+	margin-top: 5px;
 }
 
 nav.mainNavigation li {
@@ -82,6 +82,9 @@ nav.mainNavigation ul.subMenu {
 		visibility: hidden;
     opacity: 0;
     transition: visibility 0s linear 0.15s,opacity 0.15s linear;
+}
+ul.menu {
+
 }
 ul.subMenu > li {
 	margin-left: 0;
@@ -1020,7 +1023,7 @@ hr{
 	background-color: #15171a;
 	border: none;
 	opacity: 0.2;
-	margin: 35px 0;
+	margin: 40px 0;
 }
 
 .contactFieldFull{
@@ -1043,12 +1046,48 @@ hr{
 	display: inline-block;
 	margin-top: 25px;
 	color: #FFF;
-	font-size: 15px;
+	font-size: 16px;
 	background-color: #474242;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	padding: 0 10px;
 	border-radius: 4px 4px 0 0;
 }
 .contactFieldTitle:after{
 	content: " *";
+}
+.contactSubmitButton{
+	text-decoration: none;
+	text-align: center;
+	/*text-transform: uppercase;*/
+	font-size: 15px ;
+	display:block;
+	width: 130px;
+	margin: 30px 30px 0 0;
+	padding: 10px;
+	background-color: rgb(39, 39, 39);
+	color: #FFF;
+	border: none;
+	cursor: pointer;
+}
+
+
+
+/*||||||||||||||||||||||||ABOUT US|||||||||||||||||||||||||*/
+.aboutWrapper{
+	font-family: 'Patrick Hand';
+	letter-spacing: 2px;
+	line-height: 25px;
+}
+.aboutThumbImage{
+	width: 670px;
+}
+
+.aboutBlockFull{
+	margin-top: 30px;
+	text-align: left;
+}
+.aboutBlockHalf{
+	float:left;
+	width: 305px;
+	margin: 0 10px;
 }

@@ -22,12 +22,7 @@ Carpenta::Application.routes.draw do
   match '/commerce/showOrder/:id', :to => 'orders#showOrder', :via => 'get'
 
 
-
-
-
-  match '/template',      to: 'static_pages#template',      via: 'get'
-  match '/contact',       to: 'static_pages#contact',       via: 'get'
-
+  match '/about',         to: 'static_pages#about',         via: 'get'
 
  
   # The priority is based upon order of creation: first created -> highest priority.

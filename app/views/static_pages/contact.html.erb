@@ -2,7 +2,7 @@
 
 <div class="contactWrapper">
 	<div class="googleMap">
-		<iframe src="http://mapsengine.google.com/map/embed?mid=zJLf4_3Y-Blk.ka6sJlMzkIrY" width="590" height="330"></iframe>
+		<iframe src="http://mapsengine.google.com/map/embed?mid=zJLf4_3Y-Blk.ka6sJlMzkIrY" width="590" height="480"></iframe>
 	</div>
 	<div class="contactStatement">
 		Contact us, We'd love to hear from you!
@@ -23,7 +23,7 @@
 		<%= label_tag "user_info[message]", "Message", :class=>"contactFieldTitle" %>
 		<%= text_area_tag "user_info[message]",nil, :size=> "25x10", :class=>"contactFieldFull" %>
 
-		<%= submit_tag "Submit" %>
+		<%= submit_tag "Submit", :class=>"contactSubmitButton" %>
 
 	<% end %>
 
