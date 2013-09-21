@@ -1,4 +1,9 @@
+<% provide(:title, 'Your Cart') %>
+
 <div class="shoppingCartWrapper">
+	<div class="cartBacklink">
+		<%= link_to "← Continue Shopping", root_path %>
+	</div>
 	<div class="cartTitle">Shopping Cart</div>
 	<div class="shoppingCart">
 		<%= render(:partial => 'carts/shoppingCart') %>

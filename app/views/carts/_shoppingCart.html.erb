@@ -1,6 +1,6 @@
 <% if @cart.total_items == 0 %>
 		You have nothing in your shopping cart. 
-		<a href='#'>Continue Shopping</a>
+		<!-- <a href='#'>Continue Shopping</a> -->
 	<% else %>
 
 		<table class="cartDetails">
@@ -26,13 +26,7 @@
 					</td>
 					<td class="cartProductQty">
 						<input id= "cartProductQtyInput" type="number" max='99' min='1' value=<%= order_line_item.quantity %> data-id=<%= order_line_item.id %>>
-						<%#= number_field_tag("cartProductQtyInput", order_line_item.quantity, in:1..99), remote: true %>
-
-
-
-
-
-
+						
 					</td>
 					<td class="cartProductPrice">
 						<%= number_to_currency(order_line_item.total_price, :precision=>0, :unit=>'')%>
