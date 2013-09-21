@@ -93,7 +93,7 @@ ul.subMenu > li {
 	display: inline-block;
 
 }
-.menu>li:hover ul.subMenu, .menu>li:active ul.subMenu{
+.menu>li:hover ul.subMenu, .menu>li>a:focus ul.subMenu, .menu>li>a:active ul.subMenu{
 	visibility: visible;
 	opacity: 1;
 	transition-delay: 0.2s, 0.2s;
