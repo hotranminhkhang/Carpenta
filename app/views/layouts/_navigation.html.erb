@@ -1,11 +1,11 @@
-<nav class="mainNavigation clearfix">
+<nav class="mainNavigation clearfix ">
 	<ul class="menu clearfix">
 	  <li>
 	  	<%= link_to("Home", root_path) %>
 	  </li>
 	  
  		<!-- Dynamic Collection Submenu -->
-	  <li><a>SHOP</a>
+	  <li><a>Shop</a>
 	    <ul class="subMenu">
 	    	<% @collections.each do |c| %>
 	    		<li>
@@ -16,13 +16,47 @@
 	    </ul>
 	  </li>
 
-	  <li><a href="/">SERVICES</a></li>
-	  <li><a href="/">NEWS</a></li>
+	  <li><a href="/">Services</a></li>
+	  <li><a href="/">News</a></li>
 	  <li>
 	  	<%= link_to("About Us", :controller => 'static_pages', :action => 'about') %>
 	  </li>
 	  <li>
-	  	<%= link_to("CONTACT", :controller => 'static_pages', :action => 'contact') %>
+	  	<%= link_to("Contact", :controller => 'static_pages', :action => 'contact') %>
 	  </li>
 	</ul>
 </nav>
+
+<nav class="mobileNavigation">
+	<ul>
+	  <li>
+	  	<%= link_to("Home", root_path) %>
+	  </li>
+ 		<!-- Dynamic Collection Submenu -->
+	  <li><a>Shop</a>
+	    <ul class="subMenu">
+	    	<% @collections.each do |c| %>
+	    		<li>
+	    			<%= link_to(c.title, :controller => 'shop', :action => 'collection', :collection => c.permalink) %>
+	    		</li>
+
+	    	<% end %>
+	    </ul>
+	  </li>
+
+	  <li><a href="/">Services</a></li>
+	  <li><a href="/">News</a></li>
+	  <li>
+	  	<%= link_to("About Us", :controller => 'static_pages', :action => 'about') %>
+	  </li>
+	  <li>
+	  	<%= link_to("Contact", :controller => 'static_pages', :action => 'contact') %>
+	  </li>
+	</ul>
+</nav>
+
+
+<script>
+	var nav = responsiveNav(".mobileNavigation");
+</script>
+

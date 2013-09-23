@@ -45,6 +45,10 @@
 
 
 /*========================Navigation========================*/
+nav.mobileNavigation, .nav-toggle{
+	display: none;
+}
+
 
 nav.mainNavigation {
 	/*width: 90%;*/
@@ -87,8 +91,8 @@ ul.menu {
 
 }
 ul.subMenu > li {
-	margin-left: 0;
-	margin-right: 0;
+	margin-left: 10px;
+	margin-right: 10x;
 	float: none;
 	display: inline-block;
 
@@ -99,9 +103,9 @@ ul.subMenu > li {
 	transition-delay: 0.2s, 0.2s;
 }
 
-ul.subMenu li:after{content: "|";}
+/*ul.subMenu li:after{content: "|";}
 ul.subMenu li:before{content: "|";}
-
+*/
 nav.mainNavigation a {
 	text-decoration: none;
 	color: rgb(251, 251, 251);	
@@ -1106,4 +1110,93 @@ hr{
 	float:left;
 	width: 305px;
 	margin: 0 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*//////////////////////////RESPONSIVE DESIGN//////////////////////////*/
+
+@media only screen
+and (min-width : 50px)
+and (max-width : 480px)	{
+
+	/*========================Navigation========================*/
+	.mainNavigation{display:none;}
+	.mobileNavigation ul {
+	  margin: 0;
+	  padding: 0;
+	  width: 100%;
+	  display: block;
+	  list-style: none;
+	  background: image-url("debut_dark.png");
+	}
+	.mobileNavigation li {
+	  width: 100%;
+	  display: block;
+		padding: 0.6em 2em;
+	  border-top: 1px solid rgba(255,255,255,0.09);
+	  border-bottom: 1px solid rgba(0,0,0,0.5);
+	}
+	.mobileNavigation a {
+		color: rgb(170,170,170);
+	  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		font-weight: 700;
+		font-size: 16px;
+		text-decoration: none;
+		box-sizing: border-box;
+		text-shadow: rgba(0,0,0,0.5) 0px -1px;
+		width: 100%;
+	}
+	.mobileNavigation a:hover{
+		color: #4CC525;
+	}
+	ul.subMenu li{
+		margin: 0;
+		border: none;
+	}	
+	ul.subMenu li:before{ }
+	.js .mobileNavigation {
+	  clip: rect(0 0 0 0);
+	  max-height: 0;
+	  position: absolute;
+	  display: block;
+	  overflow: hidden;
+	  zoom: 1;
+	}
+	.mobileNavigation.opened {
+	  max-height: 9999px;
+	}
+	.nav-toggle {
+	  -webkit-tap-highlight-color: rgba(0,0,0,0);
+	  -webkit-touch-callout: none;
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	  -o-user-select: none;
+	  user-select: none;
+	  display: block;
+	  margin: auto;
+	  width: 60px;
+	  height: 40px;
+	  z-index: 10;
+	  text-indent: -9999px;
+	  background: image-url("hamburger.png") 50% 50% no-repeat rgba(81, 245, 29, 1);
+	  border-radius: 0 0 10px 10px;
+	}
+
+
+	/*=========================Social Icon=========================*/
+	.social {width: auto;}
+
+
+	
 }
