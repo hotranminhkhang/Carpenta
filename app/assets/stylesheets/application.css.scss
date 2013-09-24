@@ -197,7 +197,6 @@ nav.mainNavigation a:hover {
 	font-size: 21px;
 	font-style: italic;
 	font-weight: normal;
-	height: 29px;
 	letter-spacing: normal;
 	line-height: 29px;
 	margin-bottom: 15px;
@@ -496,12 +495,16 @@ body {
 }
 .productThumbnails {
 	width: 325px;
+	overflow: hidden;
 }
-.productThumbnails .thumbnailImage {
+.thumbnailImage {
 	float: left;
 	width: 60px;
 	margin: 2.5px;
 	overflow: hidden;	
+}
+.thumbnailImage:first-child {
+	margin-left:0;	
 }
 .productThumbnails .thumbnailImage .imgCenter {
 	display: inline-block;
@@ -1117,7 +1120,10 @@ hr{
 
 
 
-
+@media only screen
+and (min-width : 481px) {
+	
+}
 
 
 
@@ -1128,6 +1134,8 @@ hr{
 @media only screen
 and (min-width : 50px)
 and (max-width : 480px)	{
+
+
 
 	/*========================Navigation========================*/
 	.mainNavigation{display:none;}
@@ -1157,7 +1165,7 @@ and (max-width : 480px)	{
 		width: 100%;
 	}
 	.mobileNavigation a:hover{
-		color: #4CC525;
+		color: #ffd675;
 	}
 	ul.subMenu li{
 		margin: 0;
@@ -1189,7 +1197,7 @@ and (max-width : 480px)	{
 	  height: 40px;
 	  z-index: 10;
 	  text-indent: -9999px;
-	  background: image-url("hamburger.png") 50% 50% no-repeat rgba(81, 245, 29, 1);
+	  background: image-url("hamburger.png") 50% 50% no-repeat #ffd675;
 	  border-radius: 0 0 10px 10px;
 	}
 
@@ -1199,4 +1207,80 @@ and (max-width : 480px)	{
 
 
 	
+	/*////////////////////////APPLICATION CONTENT////////////////////////////*/
+	.innerWrapper{
+		width: auto;
+		margin: 0 /*20px 20px 20px*/;
+		padding: 20px;
+	}
+	.appLogo {
+	width: 100%;
+	height: auto;
+	}
+	.appContent{
+		border-radius: 5px;
+		padding: 30px 10px;
+	}
+	.appMoto {
+		font-size: 16px; 
+		line-height: 24px;
+		margin-bottom: 5px;
+	}
+	.appContact-site, .appPhone {
+		font-size: 13px;
+		line-height: 17px;
+	}
+
+
+	/*////////////////////////COLLECTIONS////////////////////////////*/
+	.productList{
+		margin: auto;
+		overflow: hidden;
+		padding: 0;
+	}
+	.productListItem{
+		width: 90%;
+		/*padding-bottom: 90%;
+		height: 0;*/
+		margin: auto;
+		/*overflow: hidden;*/
+		float:none;
+	}
+	.product-image {
+		width: auto;
+		padding-bottom: 100%;
+		height: 0;
+	}	
+	.product-image img {
+		height: 100%;
+	/*	width: auto;
+		padding-bottom: 100%;
+		height: 0;*/
+		margin-bottom:20px; 
+
+	}	
+	.product-meta {
+		padding-bottom: 30px; 
+		display: inline-block;
+	}
+
+	/*////////////////////////PRODUCT DETAILS////////////////////////////*/
+
+	.productDetails{
+		float: left;
+		margin: 30px 0;
+	}
+	.productGallery{
+		width: 100%;
+	}
+
+
+	/*////////////////////////CONTACT US////////////////////////////*/
+	.contactWrapper{
+		margin: 0;
+	}
+	.contactMap{
+		width: 100%;
+	}
+
 }
