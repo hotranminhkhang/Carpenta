@@ -1203,7 +1203,7 @@ and (max-width : 480px)	{
 
 
 	/*=========================Social Icon=========================*/
-	.social {width: auto;}
+	.social {width: auto; margin-bottom: 50px;}
 
 
 	
@@ -1283,4 +1283,22 @@ and (max-width : 480px)	{
 		width: 100%;
 	}
 
+
+	/*////////////////////////CART SUMMARY////////////////////////////*/
+	.cartSummary{
+		width: 100%;
+		overflow: hidden;
+	}
+	.cartSumBG{
+		right: auto;
+		top: auto;
+		bottom: 0;
+		width: 100%;
+		/*display: inline-block;*/
+		border-radius: 0;
+		opacity: 1;
+	}
+	.cartSumTotal{
+		margin-right: 20%;
+	}
 }
