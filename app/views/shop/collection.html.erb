@@ -10,6 +10,8 @@
       <% link = "/shop/" + @collection.permalink + "/" +p.permalink %>
       <%= link_to(link, :class => 'productListItem') do %>
         <span class="product-image">
+          <div class="product-image-dummy"></div>
+
           <%= image_tag(p.image_01.url) %>
         </span>
         <span class="product-meta">
@@ -29,3 +31,13 @@
   <%= will_paginate(@products, :class => 'digg_pagination') %>
 <% end %>
 <!-- </div> -->
+
+<script>
+  $(window).resize(function(){
+  var cw = $('.productListItem').width();
+  $('.product-image img').css({
+      'height': cw + 'px'
+  });
+});
+</script>
+
