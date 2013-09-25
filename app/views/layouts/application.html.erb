@@ -8,6 +8,11 @@
 	<% if @background != nil %>
 		<style>
 			.outerWrapper {background-image: url(<%= @background.image.url %>);}
+			@media only screen
+			and (min-width : 50px)
+			and (max-width : 480px)	{
+				.outerWrapper{background: #15171A}
+			}
 		</style>
 	<% end %>
 

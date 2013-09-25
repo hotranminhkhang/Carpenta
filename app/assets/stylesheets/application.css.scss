@@ -1301,4 +1301,28 @@ and (max-width : 480px)	{
 	.cartSumTotal{
 		margin-right: 20%;
 	}
+
+	/*////////////////////////SHOW CART////////////////////////////*/
+	.shoppingCartWrapper{
+		padding: 0;
+	}
+	.cartBacklink{
+		top: auto;
+		right: auto;
+		margin-bottom: 10px;
+	}
+	.cartProductImageDiv{
+		width: 60px;
+	}
+	.cartProductImage img{
+		height: 60px;
+	}
+	.cartProductImage, .cartProductTitle, .cartProductQty{
+		width: auto;
+	}
+	
+
+	/*////////////////////////CHECK OUT////////////////////////////*/
+	.orderPage{width: auto;}
+	.orderSummary, .orderInfo{ margin:10px 0;}
 }
