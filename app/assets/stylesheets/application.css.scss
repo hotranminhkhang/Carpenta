@@ -134,6 +134,12 @@ nav.mainNavigation a:hover {
 
 .cartSumBG{
 	color: #DDD;
+	background-color: #1e1e1e;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1e1e1e), to(#040404));
+	background-image: -webkit-linear-gradient(#1e1e1e, #040404);
+	background-image: -moz-linear-gradient(#1e1e1e, #040404);
+	background-image: -o-linear-gradient(#1e1e1e, #040404);
+	background-image: -ms-linear-gradient(#1e1e1e, #040404);
 	background-image: linear-gradient(#1e1e1e, #040404);
 	border-radius: 30px;
 	width:240px;
@@ -926,6 +932,8 @@ td.orderSubTotalCell, td.orderTaxCell, td.orderShippingCell{
 	border-radius: 4px;
 	width: 100%;
 	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
 	box-shadow: 0 2px 2px rgba(0,0,0,0.05) inset;
 }
 .orderFieldHalfLeft{
@@ -937,6 +945,8 @@ td.orderSubTotalCell, td.orderTaxCell, td.orderShippingCell{
 	width: 49%;
 	float: left;
 	box-sizing: border-box;
+	-moz-box-sizing:border-;
+	-webkit-box-sizing: border-box;
 	margin-right: 2%;
 	box-shadow: 0 2px 2px rgba(0,0,0,0.05) inset;
 }
@@ -949,6 +959,8 @@ td.orderSubTotalCell, td.orderTaxCell, td.orderShippingCell{
 	width: 49%;
 	float: left;
 	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
 	box-shadow: 0 2px 2px rgba(0,0,0,0.05) inset;
 }
 .orderFieldError{
@@ -988,6 +1000,8 @@ td.orderSubTotalCell, td.orderTaxCell, td.orderShippingCell{
 	margin-top: 30px;
 	margin-bottom: 30px;
 	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
 	background: #a00 image-url("tiny-alert.png") no-repeat 7px 7px;
 
 }
@@ -1024,6 +1038,8 @@ ul.orderErrorList{
 	border-radius: 0 4px 4px 4px;
 	width: 100%;
 	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
 	box-shadow: 0 2px 2px rgba(0,0,0,0.05) inset;
 }
 
@@ -1067,6 +1083,8 @@ hr{
 	border-radius: 4px;
 	width: 100%;
 	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
 	box-shadow: 0 2px 2px rgba(0,0,0,0.05) inset;
 }
 .contactFieldFull:focus{
@@ -1171,6 +1189,8 @@ and (max-width : 480px)	{
 		font-size: 16px;
 		text-decoration: none;
 		box-sizing: border-box;
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing: border-box;
 		text-shadow: rgba(0,0,0,0.5) 0px -1px;
 		width: 100%;
 	}
@@ -1354,6 +1374,16 @@ and (max-width : 480px)	{
 
 	/*////////////////////////CHECK OUT////////////////////////////*/
 	.orderPage{width: auto;}
-	.orderSummary, .orderInfo{ margin:10px 0;}
+	.orderSummary, .orderInfo{
+		margin:10px 0; 
+		width: 100%;
+		padding: 0;
+	}
+	.orderTitle{margin-left: 20px;}
+	.orderProductTitle{width:auto;}
+	.orderProductDetails { margin: 10px;}
+	.orderProductPrice {width: auto; min-width: 70px;}
+	.orderProductQty{width: auto;}
+	.orderProductDetails tr td:last-child{padding-right: 20px;}
 }
 

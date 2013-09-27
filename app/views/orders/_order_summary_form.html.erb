@@ -2,8 +2,8 @@
 <table class="orderProductDetails">
 	<tr>
 		<th colspan="2" class="orderProductImage">Item</th>
-		<th>Quantity</th>
-		<th style="text-align:right;">Price</th>
+		<th style="text-align:center;">Quantity</th>
+		<th style="text-align:right;padding-right: 20px;">Price</th>
 	</tr>
 
 	<% @cart.order_line_items.each do |order_line_item| %>
@@ -30,19 +30,19 @@
 		<td colspan="2"></td>
 		<td>SUBTOTAL</td>
 		<td class="orderSubTotalCell"><%= number_to_currency(@cart.total_price, :precision=>0, :unit=>'')%></td>
-		<td>&nbsp</td>
+		<!-- <td>&nbsp</td> -->
 	</tr>
 	<tr class="orderTaxLine">
 		<td colspan="2"></td>
 		<td>TAX</td>
 		<td class="orderTaxCell"><%= number_to_currency(0, :precision=>0, :unit=>'')%></td>
-		<td>&nbsp</td>
+		<!-- <td>&nbsp</td> -->
 	</tr>
 	<tr class="orderShippingLine">
 		<td colspan="2"></td>
 		<td>SHIPPING</td>
 		<td class="orderShippingCell"><%= number_to_currency(0, :precision=>0, :unit=>'')%></td>
-		<td>&nbsp</td>
+		<!-- <td>&nbsp</td> -->
 	</tr>
 </table>
 <div class="orderGrandTotal">

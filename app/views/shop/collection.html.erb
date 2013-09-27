@@ -33,11 +33,16 @@
 <!-- </div> -->
 
 <script>
-  $(window).resize(function(){
+ var cw = $('.productListItem').width();
+  $('.product-image img').css({
+      'height': cw + 'px'
+  });
+$(window).resize(function(){
   var cw = $('.productListItem').width();
   $('.product-image img').css({
       'height': cw + 'px'
   });
 });
+
 </script>
 
